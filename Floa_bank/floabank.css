@@ -1,0 +1,3233 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,700&display=swap');
+
+:root {
+  --primary: #00FF87;
+  --secondary: #333333;
+  --tertiary: #009FFF;
+  --main-background:#FFFFFF;
+  --default-color: #e1e4e8;
+  --default-color-text: #8a94a6;
+  --form-template-direction: row; /*Choice row or column*/
+  --form-font-primary: Georgia, sans-serif;
+  --form-font-secondary: 'Noto Sans', sans-serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 16px !important;
+  overflow-y: visible;
+  height: calc(100vh - 16px);
+}
+
+body > div[role="dialog"] {
+  background-color: var(--tertiary) !important;
+}
+
+body > div[role="dialog"] [class*="MuiPickersToolbar-toolbar-"] {
+  background-color: var(--tertiary) !important;
+}
+
+body > div[role="dialog"] [class*="MuiPickersDay-daySelected-"] {
+  background-color: var(--tertiary);
+}
+
+body > div[role="dialog"] [class*="MuiButton-text-"] {
+  color: var(--tertiary);
+}
+
+a {
+  color: inherit !important;
+}
+
+input {
+  width: 100%;
+  font-family: var(--form-font-secondary) !important;
+  font-size: 18px !important;
+  line-height: 18px !important;
+  height: 20px !important;
+  color: var(--secondary) !important;
+  background: white !important;
+}
+
+div[aria-haspopup="listbox"] {
+  font-family: var(--form-font-secondary) !important;
+  font-size: 18px !important;
+  line-height: 18px !important;
+  color: var(--secondary) !important;
+  border-radius: unset !important;
+  background: white !important;
+  border: 1px solid #d9d9d6 !important;
+}
+
+div[aria-haspopup="listbox"] p {
+  margin: unset !important;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--secondary) !important;
+}
+
+input::-moz-placeholder {
+  color: var(--secondary) !important;
+}
+
+input:-ms-input-placeholder {
+  color: var(--secondary) !important;
+}
+
+input::-ms-input-placeholder {
+  color: var(--secondary) !important;
+}
+
+input::placeholder {
+  font-size: 16px;
+  color: var(--secondary) !important;
+}
+
+[class*="MuiFormControl-root-"] {
+  overflow: unset !important;
+}
+
+[class*="MuiTextField-root-"] > [class*="MuiInputBase-formControl-"] {
+  background: white !important;
+  border-radius: unset !important;
+  border: 1px solid #d9d9d6 !important;
+}
+
+[class*="MuiTextField-root-"] > [class*="MuiInputBase-formControl-"]:hover:not([class*="Mui-error"]) {
+  background: white !important;
+  border-radius: unset !important;
+  border: 1px solid #d9d9d6 !important;
+}
+
+[class*="MuiTextField-root-"] > div[class*="Mui-error"] {
+  background: white !important;
+  border-radius: unset !important;
+  border: 1px solid #f44336 !important;
+  -webkit-border-radius: unset !important;
+  -moz-border-radius: unset !important;
+  -ms-border-radius: unset !important;
+  -o-border-radius: unset !important;
+}
+
+[class*="MuiAutocomplete-endAdornment-"] button {
+  background-color: unset !important;
+}
+
+[class*="MuiIconButton-label-"] > svg > path:first-child {
+  fill: white !important;
+}
+
+[class*="MuiPickersCalendarHeader-iconButton-"] > span > svg > path:first-child {
+  fill: var(--tertiary) !important;
+}
+
+[class*="MuiPickersDatePickerRoot-toolbar-"] > button > span > h6 {
+  color: white !important;
+}
+
+[id*="_password"]::after {
+  content : 'Si vous ne vous rappelez plus de votre mot de passe, vous pouvez cliquer ci-dessous sur « mot de passe oublié » afin d’en changer.';
+  display : block;
+  font-size : 14px;
+  margin-top : 10px;
+}
+
+ul[role="listbox"] {
+  padding: 0 !important;
+}
+
+ul[role="listbox"] li {
+  padding: 8px !important;
+}
+
+ul[role="listbox"] li p {
+  margin: unset !important;
+}
+
+ul[role="listbox"] li:not([data-value=""]) {
+  color: #8a94a6;
+  border-top: 2px solid #e1e4e8;
+  padding: 16px;
+  font-size: 19px;
+}
+
+fieldset {
+  border: none !important;
+}
+
+#field-code_pub {
+  display:none;
+}
+#field-code_campagne {
+  display:none;
+}
+
+#particeep-product > div {
+  padding: unset;
+}
+
+.root {
+  height: 100%;
+}
+
+.container {
+  width: 100% !important;
+  max-width: unset !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.funnel {
+  background: -o-linear-gradient(left, var(--main-background) 75%, var(--tertiary) 25%) !important;
+  background: -webkit-gradient(linear, left top, right top, color-stop(75%, var(--main-background)), color-stop(25%, var(--tertiary))) !important;
+  background: linear-gradient(to right, var(--main-background) 75%, var(--tertiary) 25%) !important;
+}
+
+.form_body {
+  padding: unset !important;
+  width: 100% !important;
+}
+
+.product-step {
+  width: 100% !important;
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
+
+
+/*HEADER ************************************************************** */
+
+
+/* .header {
+  width: 100% !important;
+  position: relative !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  min-height: 75px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 24px !important;
+  background: white;
+}
+
+.header > img {
+  margin-right: 20px;
+}
+
+.header::after {
+  content: "Assurance obsèques — Devis et souscription";
+  font-family: var(--form-font-primary);
+  font-size: 18px;
+  border-left: 1px solid var(--primary);
+  color: var(--tertiary);
+  padding-left: 20px;
+}
+
+.header::before {
+  content: 'Du lundi au vendredi de 9H à 18 h';
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  font-family: var(--form-font-secondary);
+  width: 224px;
+  height: 45px;
+  right: 24px;
+  background: url('https://api.particeep.com/document/c91c3f21-fe0f-46e5-a448-e3facc134904') no-repeat;
+  background-size: contain;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: var(--secondary);
+  padding-top: 10px;
+} */
+
+/*HEADER ************************************************************** */
+
+.header {
+  display: none !important;
+}
+
+#particeep-product > div > div.meta_top {
+  width: 100% !important;
+  position: relative !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  min-height: 75px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 24px !important;
+  background: white;
+}
+
+#particeep-product > div > div.meta_top > div {
+  width: inherit;
+}
+
+#particeep-product > div > div.meta_top .meta_container,
+#particeep-product > div > div.meta_top .meta_container .meta_description {
+  width: inherit;
+  margin: unset;
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table thead,
+#particeep-product > div > div.meta_top .meta_container > div:first-child {
+  display: none !important;
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table {
+  width: 100%;
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:first-child {
+  display: flex;
+  align-items: center;
+  width: 181px;
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:first-child img {
+  width: 160px;
+  padding-right: 20px;
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(2) {
+  padding-left: 20px;
+  padding-top: unset;
+  padding-bottom: unset;
+  font-family: var(--form-font-primary);
+  font-size: 18px;
+  border-left: 1px solid var(--primary);
+  color: var(--tertiary);
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(3) {
+  margin-left: auto;
+  font-size: 12px;
+  font-family: var(--form-font-secondary);
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(3) img {
+  width: 224px;
+  display: block;
+}
+
+#particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(4) {
+  display: none !important;
+}
+
+.product_stepper {
+  padding: unset !important;
+  background: var(--tertiary) !important;
+}
+
+.product_stepper > .product_stepper_container {
+  padding: unset !important;
+  background-color: var(--tertiary) !important;
+}
+
+.product_stepper > .product_stepper_container > div {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: transparent;
+}
+
+.product_stepper .product_stepper_container [class*="MuiStep-root-"] [class*="MuiStepLabel-labelContainer-"] {
+  display: none;
+}
+
+.product_stepper .product_stepper_container [class*="MuiStep-root-"] span[class*="MuiStepLabel-root-"]::after {
+  font-family: var(--form-font-secondary);
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, .5) !important;
+}
+
+.product_stepper .product_stepper_container .product_stepper_step_active span[class*="MuiStepLabel-root-"]::after {
+  font-weight: bold;
+  color: white !important;
+}
+
+.product_stepper .product_stepper_container [class*="MuiStep-root-"]:nth-child(1) span[class*="MuiStepLabel-root-"]::after {
+  content: 'Votre besoin';
+  display: block;
+}
+
+.product_stepper .product_stepper_container [class*="MuiStep-root-"]:nth-child(3) span[class*="MuiStepLabel-root-"]::after {
+  content: 'Vous';
+  display: block;
+}
+
+.product_stepper .product_stepper_container [class*="MuiStep-root-"]:nth-child(5) span[class*="MuiStepLabel-root-"]::after {
+  content: 'Devis';
+  display: block;
+}
+
+.product_stepper .product_stepper_container [class*="MuiStep-root-"]:nth-child(7) span[class*="MuiStepLabel-root-"]::after {
+  content: 'Récapitulatif';
+  display: block;
+}
+
+.product_stepper .product_stepper_container [class*="MuiStep-root-"]:nth-child(9) span[class*="MuiStepLabel-root-"]::after {
+  content: 'Souscription';
+  display: block;
+}
+
+.product_stepper .product_stepper_container [class*="MuiStep-root-"]:nth-child(11) span[class*="MuiStepLabel-root-"]::after {
+  content: 'Confirmation';
+  display: block;
+}
+
+.product_stepper [class*="MuiStepConnector-root-"] {
+  display: none;
+}
+
+.product_stepper [class*="MuiSvgIcon-root-"] > circle {
+  fill: rgba(255, 255, 255, .5) !important;
+}
+
+.product_stepper .product_stepper_step_active [class*="MuiStepIcon-active-"] > circle {
+  fill: white !important;
+}
+
+.product_stepper [class*="MuiSvgIcon-root-"] > text,
+.product_stepper .product_stepper_step_active [class*="MuiStepIcon-active-"] > text {
+  fill: var(--tertiary) !important;
+}
+
+
+/*STEP CONTAINER ************************************************************** */
+
+
+.product-step {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: var(--form-template-direction);
+          flex-direction: var(--form-template-direction);
+}
+
+
+/*META RIGHT ************************************************************** */
+
+
+.product-step .meta_right {
+  position: relative;
+  width: 25%;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  align-items: stretch;
+}
+
+.product-step .meta_right > div {
+  display: flex;
+}
+
+.product-step .meta_right [class*="meta_step_RIGHT_"] {
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  min-height: unset !important;
+  height: unset;
+}
+
+.product-step .meta_right .meta_container {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-step .meta_right .meta_container p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product-step .meta_right .meta_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: unset !important;
+  margin-bottom: unset !important;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.product-step .meta_right .meta_container .meta_title {
+  margin-top: unset !important;
+  font-family: var(--form-font-secondary) !important;
+}
+
+.product-step .meta_right .meta_container .meta_title p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.4;
+  color: white;
+  text-align: left;
+  margin-bottom: 0px;
+  margin-left: unset !important;
+}
+
+.product-step .meta_right .meta_container .meta_title p strong {
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+.product-step .meta_right .meta_container .meta_title p:first-child {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: white;
+  margin-bottom: 35px;
+  border-left: 1px solid var(--default-color);
+}
+
+.product-step .meta_right .meta_container .meta_title p:first-child img {
+  display: block;
+  width: 65%;
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+
+.product-step .meta_right .meta_container .meta_subtitle {
+  margin-left: 30px !important;
+  margin-right: 70px !important;
+  font-family: var(--form-font-secondary) !important;
+  color: white;
+}
+
+.product-step .meta_right .meta_container .meta_subtitle ul {
+  padding-left: unset !important;
+  list-style: none;
+}
+
+.product-step .meta_right .meta_container .meta_subtitle ul li::before {
+  content: url('https://api.particeep.com/document/23bb14ec-fc17-4ca9-a589-c3fe633a2b6c');
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin-right: 10px;
+}
+
+.product-step .meta_right .meta_container .meta_subtitle ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  margin-bottom: 30px !important;
+}
+
+.product-step .meta_right .meta_container .meta_subtitle ul li p {
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  vertical-align: top;
+  letter-spacing: normal;
+}
+
+.product-step .meta_right .meta_container .meta_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: end;
+  height: 200px;
+  background: white;
+  padding-left: 30px !important;
+  margin-top: auto !important;
+  margin-bottom: unset !important;
+}
+
+.product-step .meta_right .meta_container .meta_description p {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  font-family: var(--form-font-secondary);
+  color: var(--secondary);
+}
+
+.product-step .meta_right .meta_container .meta_description p img {
+  width: 255px;
+}
+
+.product-step .meta_right .meta_container .meta_description p:first-child {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.product-step .meta_right .meta_container .meta_description p:last-child {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+
+/*META BOTTOM ************************************************************** */
+
+
+.product-step .meta_bottom {
+  position: relative;
+  background: white;
+  border-top: solid 1px #d1d1d1;
+}
+
+.product-step .meta_bottom .meta_container {
+  width: 80%;
+  padding: 0 75px;
+}
+
+.product-step .meta_bottom .meta_container div:first-child {
+  display: none;
+}
+
+.product-step .meta_bottom .meta_container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.product-step .meta_bottom .meta_container .meta_description {
+  font-size: 14px;
+  line-height: 19px;
+  color: #75787b;
+}
+
+.product-step .meta_bottom .meta_container .meta_description a {
+  color: var(--tertiary) !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+/*META FIELD ************************************************************** */
+
+
+.product-step .meta_middle {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex !important;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+  align-items: stretch;
+}
+
+.step_content {
+  position: relative;
+  width: 75%;
+  margin-top: 0;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.step_content > div, .step_content > label {
+  padding: 0 42px 16px 42px !important;
+}
+
+.step_content > label {
+  margin-left: unset !important;
+}
+
+.step_content button {
+  background-color: var(--primary);
+}
+
+.step_content .field_content .field_label {
+  font-weight: bold;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  font-family: var(--form-font-secondary);
+  color: var(--secondary);
+}
+
+.step_content .field_content > div:not(.field_label):not(.meta_container) {
+  width: 70%;
+}
+
+.step_content .field_content {
+  margin-bottom: unset !important;
+}
+
+
+/*NEXT BUTTON ************************************************************** */
+
+
+.button_container,
+.button_account_reset {
+  padding: 0px 0px 30px 0px !important;
+}
+
+.button_container .button_item_container > div > button,
+.button_container .button_item_container > button,
+.button_account_reset {
+  position: relative;
+  padding: 15px 30px !important;
+  font-size: 16px !important;
+  font-family: var(--form-font-secondary);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  text-transform: none !important;
+  color:white !important;
+  cursor: pointer !important;
+  border-radius: unset !important;
+  line-height: 1.75 !important;
+  background-color: var(--primary) !important;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+  letter-spacing: unset !important;
+  -webkit-border-radius: unset !important;
+  -moz-border-radius: unset !important;
+  -ms-border-radius: unset !important;
+  -o-border-radius: unset !important;
+}
+
+.button_account_reset {
+  margin-right: 10px !important;
+  margin-left: unset !important;
+}
+
+.button_account_reset [class*="MuiButton-label-203"] svg {
+  stroke: white;
+}
+
+.button_container .button_item_container > div > button:hover,
+.button_container .button_item_container > button:hover,
+.button_account_reset:hover {
+  background-color: var(--tertiary) !important;
+}
+
+.button_container .button_item_container > div > button:disabled {
+  background-color: var(--default-color-text) !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.button_container .button_item_container > div > button > span,
+.button_container .button_item_container > button > span,
+.button_account_reset > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button_container .button_item_container:last-child > div > button > span:first-child::after,
+.button_container .button_item_container:last-child > button > span:first-child::after {
+  content: url('https://api.particeep.com/document/a217e8f1-db28-4d82-9902-e59d611b4bd3');
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.button_container .button_item_container:first-child > div > button > span:first-child::before,
+.button_container .button_item_container:first-child > button > span:first-child::before {
+  content: url('https://api.particeep.com/document/a217e8f1-db28-4d82-9902-e59d611b4bd3');
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transform: rotate(-180deg) ;
+  -webkit-transform: rotate(-180deg) ;
+  -moz-transform: rotate(-180deg) ;
+  -ms-transform: rotate(-180deg) ;
+  -o-transform: rotate(-180deg) ;
+}
+
+.button_container .button_item_container:last-child > div:not(:last-child) {
+  display: none;
+}
+
+.button_secondary {
+  height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent !important;
+  text-transform: lowercase !important;
+  color: var(--default-color-text);
+  margin-right: 30px !important;
+}
+
+
+/*META TOP ************************************************************** */
+
+
+.step_content .field_content .meta_container {
+  margin-bottom: 30px;
+}
+
+.step_content .field_content .meta_container .meta_title {
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.96;
+  letter-spacing: normal;
+  margin-top: 0 !important;
+  border-bottom: solid 1px #d1d1d1;
+}
+
+.step_content .field_content .meta_container .meta_title p {
+  font-family: var(--form-font-primary);
+  color: var(--tertiary);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.step_content .field_content .meta_container .meta_subtitle,
+.step_content .field_content .meta_container .meta_description {
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  font-family: var(--form-font-secondary);
+  color: var(--secondary);
+}
+
+.step_content .field_content .meta_container .meta_subtitle {
+  font-weight: bold;
+}
+
+
+/*RADIO FIELD ************************************************************** */
+
+
+.radio_field_container {
+  display: -ms-inline-grid !important;
+  display: inline-grid !important;
+  -ms-grid-columns: 1fr 30px 1fr !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-gap: 30px !important;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+.radio_field_single_button,
+.radio_field_img_button {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.radio_field_img_button p,
+.radio_field_single_button p {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.radio_field_single_button span:last-child {
+  line-height: 1 !important;
+}
+
+.radio_field_img_button > span:last-child > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.radio_field_img_button > span:last-child > div > p,
+.radio_field_single_button p {
+  margin: 0;
+}
+
+.radio_field_image {
+  width: 90px;
+  height: 90px;
+}
+
+.radio_field_img_button span,
+.radio_field_img_button.checked span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 280px;
+  height: 190px;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 45px;
+  color: var(--tertiary);
+  -webkit-box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.08);
+          box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.08);
+}
+
+.radio_field_img_button span {
+  color: var(--tertiary);
+  background: white;
+}
+
+.radio_field_img_button.checked span {
+  color: white;
+  background: var(--tertiary);
+}
+
+.radio_field_single_button,
+.radio_field_single_button.checked {
+  width: 100%;
+  min-width: 200px;
+  display: inline-block !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.radio_field_single_button span,
+.radio_field_single_button.checked span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 45px;
+  padding: 30px 70px 30px 70px;
+  color: var(--tertiary);
+  -webkit-box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.1);
+          box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.1);
+}
+
+.radio_field_single_button span {
+  color: var(--tertiary);
+  background: white;
+}
+
+.radio_field_single_button:hover span,
+.radio_field_single_button.checked span {
+  color: white;
+  background: var(--tertiary);
+}
+
+.radio_field_single_button span:first-child,
+.radio_field_single_button.checked span:first-child {
+  display: none;
+}
+
+.radio_field_label {
+  font-family: var(--form-font-primary);
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--secondary);
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+
+/*SELECT FIELD ************************************************************** */
+
+
+.select_field_container > input ~ div {
+  border: 1px solid red !important;
+}
+
+.select_field_container > input[value] ~ div {
+  border-radius: 4px !important;
+  border: 1px solid var(--primary) !important;
+}
+
+.select_field_container > input[value=""] ~ div {
+  border: 1px solid var(--default-color) !important;
+}
+
+.select_field_container svg {
+  right: 16px;
+}
+
+.select_field_container [class*="MuiAutocomplete-endAdornment-"] button[aria-label="Clear"] svg path {
+  fill: var(--secondary);
+}
+
+.select_field_container [class*="MuiSelect-iconOutlined-"] path,
+.select_field_container [class*="MuiAutocomplete-endAdornment-"] button[aria-label="Open"] svg path,
+.select_field_container [class*="MuiAutocomplete-endAdornment-"] button[aria-label="Close"] svg path {
+  fill: var(--secondary);
+  d: path('M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z') !important;
+}
+
+.select_field_container > div > p,
+.select_field_container > div > span {
+  margin: 0;
+  padding: 0;
+}
+
+.select_field_container::before,
+.select_field_container:hover::before,
+.select_field_container:focus::before,
+.select_field_container::after,
+.select_field_container:hover::after,
+.select_field_container:focus::after {
+  border-bottom: none !important;
+}
+
+
+/*FOOTER ************************************************************** */
+
+
+.footer {
+  background: var(--tertiary);
+  color: white;
+  padding: 0 75px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footer > span {
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+
+.footer > span > p {
+  font-family: var(--form-font-secondary);
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-smooth: none;
+  font-style: normal;
+  line-height: 1.54;
+}
+
+
+/*PRICER ************************************************************** */
+
+
+.step-type-price > .meta_middle {
+  position: relative;
+}
+
+.step-type-price > .meta_middle > .meta_left {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(75% - 104px);
+  top: 0;
+  left: 0;
+  padding: 0 52px;
+}
+
+.step-type-price > .meta_middle > .meta_left > div,
+.step-type-price > .meta_middle > .meta_left > div > div,
+.step-type-price > .meta_middle > .meta_left .meta_container > div {
+  width: 100%;
+}
+
+.step-type-price > .meta_middle > .meta_left .meta_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.step-type-price > .meta_middle > .meta_left .meta_container {
+  width: 100%;
+  margin-bottom: unset !important;
+}
+
+.step-type-price > .meta_middle > .meta_left .meta_container .meta_title {
+  width: 100%;
+  border-bottom: solid 1px #d1d1d1;
+  margin-block-start: unset;
+  margin-block-end: unset;
+}
+
+.step-type-price > .meta_middle > .meta_left .meta_container .meta_title p {
+  font-family: var(--form-font-primary);
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.96;
+  letter-spacing: normal;
+  margin-bottom: 30px;
+  color: var(--tertiary);
+  text-align: left;
+}
+
+.step-type-price > .meta_middle > .meta_left .meta_container .meta_description {
+  font-family: var(--form-font-secondary);
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  color: var(--secondary);
+}
+
+.step-type-price > .meta_middle > .meta_left .meta_container .meta_description p:first-child {
+  margin-bottom: 30px;
+}
+
+.step-type-price > .meta_middle > .meta_left .meta_container .meta_description p:last-child {
+  font-weight: bold;
+  color: var(--tertiary);
+}
+
+.step-type-price > .meta_middle > .step_content {
+  margin-top: 210px;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container::after {
+  content: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est garanti immédiatement en cas de décès accidentel ; après 2 ans si le décès fait suite à une maladie (les\A       cotisations versées seront toutefois remboursées) ; après 1 an s’il fait suite à un suicide ou une tentative de suicide.\A\A" url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est versé à votre conjoint non séparé, non divorcé, à défaut, à vos enfants, nés ou à naitre, vivants ou représentés,\A       par parts égales, à défaut à vos héritiers. Vous pourrez modifier les  bénéficiaires de ce contrat à tout moment.\A       Il est possible que ces derniers doivent avancer les fonds dans l’attente de règlement du capital.\A       N’oubliez pas de les informer de l’existence du contrat.\A\A"url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le contrat est viager. Le montant du capital garanti à la souscription, peut être inférieur au coût des obsèques le moment venu.\A       Les cotisations versées pourraient être supérieures au montant du capital prévu par le contrat.";
+  margin-top: 40px;
+  font-family: var(--form-font-secondary);
+  font-size: 14px;
+  white-space: pre;
+  color: #75787b;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container [class*="MuiGrid-root-"] {
+  background: transparent !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item {
+  position: relative;
+  border-radius: 10px !important;
+  padding: 20px;
+  -webkit-box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.1) !important;
+          box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.1) !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_logo,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_garantees,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header .pricer_product_subtitle_container,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header .pricer_description,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header div:last-child .pricer_price p {
+  display: none;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header div:last-child .pricer_product_title {
+  line-height: normal !important;
+  white-space: break-spaces;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding-bottom: unset !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header div:last-child .pricer_price {
+  display: block;
+  padding-left: 24px;
+  border-left: solid 1px #979797;
+  padding-bottom: unset !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header div:last-child .pricer_product_title,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header div:last-child .pricer_price {
+  font-family: var(--form-font-secondary);
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: var(--tertiary);
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header div:last-child .pricer_product_title p {
+  margin-block-start: unset !important;
+  margin-block-end: unset !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header div:last-child .pricer_price::before {
+  content: 'Cotisation mensuelle';
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  font-weight: normal;
+  color: var(--secondary);
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_header div:last-child .pricer_product_title::first-line {
+  font-size: 14px;
+  text-align: left;
+  font-weight: normal;
+  color: var(--secondary);
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: unset !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_button button {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_button button,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_button button:hover {
+  background-color: transparent !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item .pricer_button button span:first-child {
+  display: none;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item.pricer_selected .pricer_button button.pricer_button_selected {
+  border: unset !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item:hover,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item.pricer_selected {
+  background-color: var(--tertiary) !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item.pricer_selected .pricer_header div:last-child .pricer_price::before,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item.pricer_selected .pricer_header div:last-child .pricer_product_title::first-line,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item.pricer_selected .pricer_header div:last-child .pricer_product_title,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item.pricer_selected .pricer_header div:last-child .pricer_price {
+  color: white !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item:hover .pricer_header div:last-child .pricer_price::before,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item:hover .pricer_header div:last-child .pricer_product_title::first-line,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item:hover .pricer_header div:last-child .pricer_product_title,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item:hover .pricer_header div:last-child .pricer_price {
+  color: white !important;
+}
+
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item:hover .pricer_header div:last-child .pricer_price,
+.step-type-price > .meta_middle > .step_content > .pricer_container .pricer_container_item.pricer_selected .pricer_header div:last-child .pricer_price {
+  padding-left: 24px;
+  border-left: solid 1px white;
+  padding-bottom: unset !important;
+}
+
+
+/*CUSTOM ************************************************************** */
+
+#step-27f06a47-6d03-430c-b3ec-555e4279675e .step_content label {
+  display: none;
+}
+
+#field-27f06a47-6d03-430c-b3ec-555e4279675e_notification > .field_label {
+  display: none;
+}
+
+#field-5e882b63-9d97-4458-86dc-f96d036cebcf .radio_field_container {
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+#field-5e882b63-9d97-4458-86dc-f96d036cebcf .meta_container .meta_title,
+#field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .meta_container .meta_title,
+#field-3e70790b-82af-415d-b590-c1f53becec4a .meta_container .meta_title,
+#field-label_step_5-4 .meta_container .meta_subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#field-5e882b63-9d97-4458-86dc-f96d036cebcf .meta_container .meta_title:after,
+#field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .meta_container .meta_title:after,
+#field-3e70790b-82af-415d-b590-c1f53becec4a .meta_container .meta_title:after,
+#field-label_step_5-4 .meta_container .meta_subtitle:after {
+  content: "* Champs obligatoires";
+  font-family: var(--form-font-secondary);
+  font-size: 14px;
+  font-weight: normal;
+  background: url('https://api.particeep.com/document/a72f6e72-dfb8-46df-9fc1-28cc3e53cb7b') no-repeat;
+  padding-left: 30px;
+  height: 20px;
+  background-size: contain;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #75787b;
+}
+
+#step-36d7f96f-b6b6-421a-b4a0-95797bfe9862 #field-birthday [class*="MuiFormControl-fullWidth-"],
+#step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .select_field_container,
+#step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-075a499b-2a47-48c3-a5f5-d8d900303014_zip .text_field_container,
+#step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-6902281b-edf8-496b-9138-0150df0fb7b1_phone .text_field_container,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 #field-57234871-3e39-4494-b8bf-b945f66656a4 .text_field_container,
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e #field-cea0a401-d7f1-4a71-b6c8-c8e0d17659a8 .text_field_container {
+  width: 30%;
+}
+
+
+/*CUSTOM STEP 5 ************************************************************** */
+
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 .field_label,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .field_label,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 .field_label,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-4 .field_label,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-5 .field_label {
+  display: none;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-4 > .meta_container {
+  margin-bottom: unset;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description {
+  width: 100%;
+  margin-bottom: unset !important;
+}
+
+/* #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_title p {
+  font-family: var(--form-font-primary);
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.96;
+  letter-spacing: normal;
+  color: var(--primary);
+  text-align: left;
+} */
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul {
+  padding-left: unset !important;
+  list-style: none;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul li::before {
+  content: url('https://api.particeep.com/document/15adfd80-cfc0-4e40-969e-c76fdeefe3a6');
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin-right: 10px;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px !important;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul li:last-child {
+  margin-bottom: unset !important;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul li p {
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_title {
+  display: none;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: space-between;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:first-child,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:first-child,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-4 > .meta_container .meta_subtitle p:first-child {
+  color: var(--tertiary) !important;
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: normal;
+  color: var(--tertiary);
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a img,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a img {
+  margin-right: 10px;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child::after,
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child::after {
+  content: url('https://api.particeep.com/document/88fca3b2-d93a-4401-aee1-337c51ffa6b1');
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_description p {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2] !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-5 > .meta_container {
+  margin-top: 30px !important;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-5 .meta_container .meta_description ul {
+  padding-left: unset !important;
+  list-style: none;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-5 .meta_container .meta_description ul li::before {
+  content: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f');
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-5 .meta_container .meta_description ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px !important;
+  font-family: var(--form-font-secondary) !important;
+  font-size: 14px !important;
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+  color: #75787b;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px !important;
+  -webkit-box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.1) !important;
+          box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.1) !important;
+  background-color: var(--tertiary);
+  margin-bottom: unset !important;
+  box-shadow: 0 2px 5px 3px rgba(124, 124, 124, 0.1) !important;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description p {
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: normal !important;
+  color: white;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description p:first-line {
+  font-size: 14px;
+  text-align: left;
+  font-weight: normal;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description p:first-child {
+  position: relative;
+  line-height: normal !important;
+  white-space: break-spaces;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding-bottom: unset !important;
+  margin-right: 50px;
+}
+
+#step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description p:last-child {
+  border-left: 1px solid #fff;
+  padding-left: 24px;
+}
+
+
+/*CUSTOM STEP 6 ************************************************************** */
+
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-label_step_6-1 .field_label,
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-label_step_6-2 .field_label {
+  display: none;
+}
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-fcbeec7d-daaf-48ad-96d7-ec41184608e1 .meta_container .meta_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-fcbeec7d-daaf-48ad-96d7-ec41184608e1 .meta_container .meta_title:after {
+  content: "* Champs obligatoires";
+  font-family: var(--form-font-secondary);
+  font-size: 14px;
+  font-weight: normal;
+  background: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f') no-repeat;
+  padding-left: 30px;
+  height: 20px;
+  background-size: contain;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #75787b;
+}
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-label_step_6-1 .meta_container .meta_title {
+  display: none;
+}
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-label_step_6-1 .meta_container .meta_description a {
+  color: var(--tertiary) !important;
+  text-decoration: underline;
+}
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-label_step_6-2 .meta_container .meta_description ul {
+  padding-left: unset !important;
+  list-style: none;
+}
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-label_step_6-2 .meta_container .meta_description ul li::before {
+  content: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f');
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-label_step_6-2 .meta_container .meta_description ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px !important;
+}
+
+#step-c3c356fc-7e60-498f-8fc3-b0f78839c11e > .meta_middle > .step_content > #field-label_step_6-2 .meta_container .meta_description ul li p {
+  font-family: var(--form-font-secondary);
+  font-size: 14px;
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+  color: #75787b;
+}
+
+
+/*CUSTOM STEP 6 ************************************************************** */
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 .field_label,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 .field_label,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 .meta_container .meta_title,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 .field_label,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 .meta_container .meta_title {
+  display: none;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 .meta_container,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 .meta_container {
+  margin-bottom: unset !important;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background: url('https://api.particeep.com/document/19bf12c3-795f-4b06-8583-9bbafed81474') no-repeat;
+  background-size: cover;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  width: 100% !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content {
+  max-width: 800px;
+  background: white;
+  margin: 0 auto !important;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--tertiary);
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p::before {
+  content: '';
+  display: block;
+  width: 61px;
+  height: 61px;
+  background: url('https://api.particeep.com/document/15adfd80-cfc0-4e40-969e-c76fdeefe3a6') no-repeat;
+  background-size: contain;
+  margin-bottom: 30px;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_description p {
+  font-weight: 300;
+  text-align: center;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_description p:last-child::before {
+  content: url('https://api.particeep.com/document/2ddfa4d4-abb3-4385-b28b-537276010e2c');
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_description p:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--tertiary);
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > .button_container {
+  justify-content: center !important;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > .button_container .button_item_container button {
+  border: 1px solid var(--tertiary) !important;
+  background: transparent !important;
+  padding: 15px 45px !important;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > .button_container .button_item_container button > span {
+  font-size: 14px;
+  color: var(--tertiary);
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > .button_container .button_item_container > div > button > span:first-child::after,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > .button_container .button_item_container > button > span:first-child::after {
+  content: url('https://api.particeep.com/document/9ae652b0-3da3-4b1a-8733-9cfecdb3c901');
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 {
+  padding: 0 75px 0 75px !important;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 > .meta_container,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container {
+  margin-bottom: 20px;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 > .meta_container .meta_description p,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 > .meta_container .meta_description p a,
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description p a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: var(--form-font-secondary);
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  text-transform: none !important;
+  padding: 15px 28px;
+  background: var(--tertiary  );
+  color: white !important;
+  line-height: 1.75 !important;
+  cursor: pointer !important;
+  width: 293px;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 > .meta_container .meta_description p a {
+  background: transparent !important;
+  color: var(--secondary) !important;
+  border: 1px solid var(--secondary) !important;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description p a::after {
+  content: url('https://api.particeep.com/document/a217e8f1-db28-4d82-9902-e59d611b4bd3');
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+#step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 > .meta_container .meta_description p a::after {
+  content: url('https://api.particeep.com/document/3d88f00e-83d1-4019-a922-f630b9a41ad3');
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+@media (max-width: 575.98px) {
+  body {
+    background: var(--main-background) !important;
+  }
+
+  .root {
+    height: unset !important;
+  }
+
+  .funnel {
+    background: unset !important;
+  }
+
+  /* .header {
+    padding: 0px 20px !important;
+    min-height: 48px;
+  }
+
+  .header > img {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .header::after {
+    content: "Assurance obsèques \A Devis et souscription";
+    font-family: var(--form-font-primary);
+    font-size: 13px;
+    border-left: 1px solid var(--primary);
+    color: var(--tertiary);
+    padding-left: 10px;
+    white-space: pre;
+  }
+
+  .header::before {
+    content: url('https://api.particeep.com/document/62609486-af32-4dca-b6b2-fc825f658ee5');
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    right: 20px;
+    background: unset !important;
+    -webkit-box-align: unset !important;
+        -ms-flex-align: unset !important;
+            align-items: unset !important;
+    color: var(--secondary);
+    padding-top: unset !important;
+  } */
+
+  #particeep-product > div > div.meta_top {
+    padding: 0px 20px !important;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table {
+    min-height: 48px;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:first-child {
+    width: fit-content;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:first-child img {
+    width: unset;
+    height: 20px;
+    padding-right: 10px;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(2) {
+    padding-left: 10px;
+    font-size: 13px;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(2) strong {
+    display: none;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(2)::before {
+    content: "Assurance obsèques \A Devis et souscription";
+    color: var(--tertiary);
+    white-space: pre;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(3) {
+    display: none !important;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(4) {
+    display: block !important;
+    margin-left: auto;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(4) a {
+    display: flex !important;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .product-step .meta_right {
+    display: none;
+  }
+
+  .product-step .meta_bottom .meta_container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  .product_stepper {
+    height: 50px;
+  }
+
+  .product_stepper > .product_stepper_container {
+    height: inherit !important;
+    padding: 0 20px !important;
+  }
+
+  .product_stepper > .product_stepper_container > div {
+    padding: 10px 0px;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] {
+    padding-left: unset !important;
+    padding-right: unset !important;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] [class*="MuiStepButton-root-"] {
+    margin: unset !important;
+    padding: unset !important;
+  }
+
+  .product_stepper .product_stepper_container button::after {
+    font-family: var(--form-font-secondary);
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .5) !important;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] span[class*="MuiStepLabel-root-"]::after {
+    content: '' !important;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active span[class*="MuiStepLabel-root-"]::after {
+    font-size: 12px;
+    font-weight: bold;
+    color: white !important;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(1) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Votre besoin' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(3) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Vous' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(5) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Devis' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(7) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Récapitulatif' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(9) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Souscription' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(11) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Confirmation' !important;
+    display: block;
+  }
+
+  .field_content .meta_container .meta_title p,
+  .meta_step_LEFT_39fc7b71-c176-43d8-84cb-bfd85f5edfa3_0 .meta_container .meta_title p {
+    font-size: 18px !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+  }
+
+  .step_content {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .step_content .field_content > div:not(.field_label):not(.meta_container) {
+    width: 100% !important;
+  }
+
+  .step_content > div {
+    padding: unset !important;
+  }
+
+  .step_content .field_content .meta_container {
+    margin-bottom: 20px !important;
+  }
+
+  .step_content .field_content .meta_container .meta_title {
+    font-size: 18px !important;
+    margin-bottom: unset !important;
+  }
+
+  .step_content .field_content .meta_container .meta_subtitle,
+  .step_content .field_content .meta_container .meta_description,
+  .step_content .field_content .field_label {
+    font-size: 14px;
+  }
+
+  .radio_field_container {
+    width: 100% !important;
+  }
+
+  .radio_field_single_button,
+  .radio_field_single_button.checked {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+
+  .radio_field_single_button span,
+  .radio_field_single_button.checked span {
+    padding: 20px 30px;
+  }
+
+  .radio_field_img_button p, .radio_field_single_button p {
+    font-size: 16px;
+  }
+
+  .button_container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px !important;
+  }
+
+  .button_container .button_item_container button > span {
+    font-size: 14px;
+  }
+
+  .button_container .button_item_container > div > button,
+  .button_container .button_item_container > button,
+  .button_account_reset > button {
+    width: 100%;
+    padding: 15px 15px !important;
+  }
+
+  .button_secondary {
+    margin: unset !important;
+  }
+
+  .footer {
+    padding: 0 20px !important;
+  }
+
+  #field-5e882b63-9d97-4458-86dc-f96d036cebcf .radio_field_container {
+    -ms-grid-columns: 1fr 30px 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  #field-5e882b63-9d97-4458-86dc-f96d036cebcf .meta_container .meta_title,
+  #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .meta_container .meta_title,
+  #field-3e70790b-82af-415d-b590-c1f53becec4a .meta_container .meta_title,
+  #field-label_step_5-1 .meta_container .meta_title,
+  #field-fcbeec7d-daaf-48ad-96d7-ec41184608e1 .meta_container .meta_title {
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin-bottom: 20px !important;
+  }
+
+  #field-5e882b63-9d97-4458-86dc-f96d036cebcf .meta_container .meta_title:after,
+  #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .meta_container .meta_title:after,
+  #field-3e70790b-82af-415d-b590-c1f53becec4a .meta_container .meta_title:after,
+  #field-label_step_5-1 .meta_container .meta_title:after,
+  #field-fcbeec7d-daaf-48ad-96d7-ec41184608e1 .meta_container .meta_title:after {
+    margin-bottom: 20px;
+    background-size: 15px 15px !important;
+    background-position: left center !important;
+  }
+
+  #step-36d7f96f-b6b6-421a-b4a0-95797bfe9862 #field-birthday [class*="MuiFormControl-fullWidth-"],
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .select_field_container,
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-075a499b-2a47-48c3-a5f5-d8d900303014_zip .text_field_container,
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-6902281b-edf8-496b-9138-0150df0fb7b1_phone .text_field_container,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 #field-57234871-3e39-4494-b8bf-b945f66656a4 .text_field_container,
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e #field-cea0a401-d7f1-4a71-b6c8-c8e0d17659a8 .text_field_container {
+    width: 100%;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left {
+    width: 100% !important;
+    padding: 0 20px !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .step-type-price > .meta_middle > .step_content {
+    margin-top: 240px;
+  }
+
+  .step-type-price > .meta_middle > .step_content > .pricer_container::after {
+    content: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est garanti immédiatement\A       en cas de décès accidentel ; après 2 ans\A       si le décès fait suite à une maladie\A       (les cotisations versées seront toutefois\A       remboursées) ; après 1 an\A       s’il fait suite à un suicide ou une tentative\A       de suicide.\A\A" url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est versé à votre conjoint\A       non séparé, non divorcé, à défaut,\A       à vos enfants, nés ou à naitre,\A       vivants ou représentés, par parts égales,\A       à défaut à vos héritiers.\A       Vous pourrez modifier les  bénéficiaires\A       de ce contrat à tout moment.\A       Il est possible que ces derniers doivent\A       avancer les fonds dans l’attente\A       de règlement du capital.\A       N’oubliez pas de les informer\A       de l’existence du contrat.\A\A"url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le contrat est viager.\A       Le montant du capital garanti\A       à la souscription, peut être inférieur\A       au coût des obsèques le moment venu.\A       Les cotisations versées pourraient être\A       supérieures au montant du capital\A       prévu par le contrat.";
+  }
+
+  .step-type-price .pricer_container {
+    width: 100% !important;
+    margin: unset !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .step-type-price .pricer_container > div {
+    padding-left: unset !important;
+    padding-right: unset !important;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left .meta_container .meta_subtitle,
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left .meta_container .meta_description {
+    font-size: 14px;
+    padding-bottom: unset !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul li::before {
+    -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child::after,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child::after {
+    display: none;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child {
+    position: relative;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a {
+    font-size: 0;
+    width: 100%;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a img,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a img {
+    margin-right: unset !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description {
+    width: 100%;
+    margin-right: unset !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be .meta_middle {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content {
+    max-width: unset !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p {
+    text-align: center;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p::before {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 20px;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 {
+    padding: unset !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description,
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description p,
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be .button_container .button_item_container button {
+    width: 100%;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description p a {
+    font-size: 14px;
+    padding: 15px 15px;
+    width: inherit !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be .button_container .button_item_container {
+    width: 100%;
+  }
+
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e .button_container .button_item_container:last-child div:last-child > button > span,
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .button_container .button_item_container:last-child div:last-child > button > span {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e .button_container .button_item_container:last-child div:last-child > button > span::after,
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .button_container .button_item_container:last-child div:last-child > button > span::after {
+    content: url('https://api.particeep.com/document/a217e8f1-db28-4d82-9902-e59d611b4bd3');
+    width: 24px;
+    height: 24px;
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+    margin-left: 10px;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .button_container .button_item_container:last-child div:last-child > button > span::before {
+    content: 'Récapitulatif';
+    font-size: 14px;
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e .button_container .button_item_container:last-child div:last-child > button > span::before {
+    content: 'Je valide';
+    font-size: 14px;
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    background: var(--main-background) !important;
+  }
+
+  .funnel {
+    background: unset !important;
+  }
+
+  #particeep-product > div > div.meta_top {
+    padding: 0px 20px !important;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table {
+    min-height: 48px;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:first-child {
+    width: fit-content;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:first-child img {
+    width: unset;
+    height: 20px;
+    padding-right: 10px;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(2) {
+    padding-left: 10px;
+    font-size: 13px;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(2) strong {
+    display: none;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(2)::before {
+    content: "Assurance obsèques \A Devis et souscription";
+    color: var(--tertiary);
+    white-space: pre;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(3) {
+    display: none !important;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(4) {
+    display: block !important;
+    margin-left: auto;
+  }
+
+  #particeep-product > div > div.meta_top .meta_container .meta_description table tbody tr td:nth-child(4) a {
+    display: flex !important;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .product-step .meta_right {
+    display: none;
+  }
+
+  .product-step .meta_bottom .meta_container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  .product_stepper {
+    height: 50px;
+  }
+
+  .product_stepper > .product_stepper_container {
+    height: inherit !important;
+    padding: 0 20px !important;
+  }
+
+  .product_stepper > .product_stepper_container > div {
+    padding: 10px 0px;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] {
+    padding-left: unset !important;
+    padding-right: unset !important;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] [class*="MuiStepButton-root-"] {
+    margin: unset !important;
+    padding: unset !important;
+  }
+
+  .product_stepper .product_stepper_container button::after {
+    font-family: var(--form-font-secondary);
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .5) !important;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] span[class*="MuiStepLabel-root-"]::after {
+    content: '' !important;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active span[class*="MuiStepLabel-root-"]::after {
+    font-weight: bold;
+    color: white !important;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(1) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Votre besoin' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(3) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Vous' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(5) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Devis' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(7) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Récapitulatif' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(9) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Souscription' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(11) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Confirmation' !important;
+    display: block;
+  }
+
+  .step_content {
+    width: 100%;
+  }
+
+  .step_content .field_content > div:not(.field_label):not(.meta_container) {
+    width: 100% !important;
+  }
+
+  .step_content > div {
+    padding: 0 20px 16px 20px !important;
+  }
+
+  .step_content .field_content .meta_container .meta_title {
+    font-size: 18px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .step_content .field_content .meta_container {
+    margin-bottom: 20px !important;
+  }
+
+  .step_content .field_content .meta_container .meta_subtitle,
+  .step_content .field_content .meta_container .meta_description,
+  .step_content .field_content .field_label {
+    font-size: 14px;
+  }
+
+  .radio_field_container {
+    width: 100% !important;
+  }
+
+  .radio_field_single_button,
+  .radio_field_single_button.checked {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+
+  .radio_field_single_button span,
+  .radio_field_single_button.checked span {
+    padding: 20px 30px;
+  }
+
+  .radio_field_img_button p, .radio_field_single_button p {
+    font-size: 16px;
+  }
+
+  .button_container {
+    justify-content: space-between !important;
+    padding: 0px 20px !important;
+  }
+
+  .button_secondary {
+    margin: unset !important;
+  }
+
+  .footer {
+    padding: 0 20px !important;
+  }
+
+  #field-5e882b63-9d97-4458-86dc-f96d036cebcf .radio_field_container {
+    -ms-grid-columns: 1fr 30px 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .meta_container .meta_title {
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+
+  #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .meta_container .meta_title:after {
+    margin-bottom: 20px;
+    background-size: 15px 15px;
+    background-position: left center;
+  }
+
+  #step-36d7f96f-b6b6-421a-b4a0-95797bfe9862 #field-birthday [class*="MuiFormControl-fullWidth-"],
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .select_field_container,
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-075a499b-2a47-48c3-a5f5-d8d900303014_zip .text_field_container,
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-6902281b-edf8-496b-9138-0150df0fb7b1_phone .text_field_container,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 #field-57234871-3e39-4494-b8bf-b945f66656a4 .text_field_container,
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e #field-cea0a401-d7f1-4a71-b6c8-c8e0d17659a8 .text_field_container {
+    width: 100%;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left {
+    width: 100% !important;
+    padding: 0 20px !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .step-type-price > .meta_middle > .step_content {
+    margin-top: 200px;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_title h1,
+  .step-type-price > .meta_middle > .meta_left > .meta_container .meta_title h1 {
+    margin-top: unset !important;
+  }
+
+  .step-type-price > .meta_middle > .meta_left > .meta_container .meta_title p {
+    font-size: 18px;
+    margin-bottom: 20px !important;
+    margin-top: unset !important;
+  }
+
+  .step-type-price > .meta_middle > .step_content > .pricer_container::after {
+    content: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est garanti immédiatement\A       en cas de décès accidentel ; après 2 ans\A       si le décès fait suite à une maladie\A       (les cotisations versées seront toutefois\A       remboursées) ; après 1 an\A       s’il fait suite à un suicide ou une tentative\A       de suicide.\A\A" url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est versé à votre conjoint\A       non séparé, non divorcé, à défaut,\A       à vos enfants, nés ou à naitre,\A       vivants ou représentés, par parts égales,\A       à défaut à vos héritiers.\A       Vous pourrez modifier les  bénéficiaires\A       de ce contrat à tout moment.\A       Il est possible que ces derniers doivent\A       avancer les fonds dans l’attente\A       de règlement du capital.\A       N’oubliez pas de les informer\A       de l’existence du contrat.\A\A"url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le contrat est viager.\A       Le montant du capital garanti\A       à la souscription, peut être inférieur\A       au coût des obsèques le moment venu.\A       Les cotisations versées pourraient être\A       supérieures au montant du capital\A       prévu par le contrat.";
+  }
+
+  .step-type-price .pricer_container {
+    width: 100% !important;
+    margin: unset !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left .meta_container .meta_subtitle,
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left .meta_container .meta_description {
+    font-size: 14px;
+    padding-bottom: unset !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_title p {
+    font-size: 17px;
+    margin-bottom: 20px !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul li::before {
+    -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child::after,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child::after {
+    display: none;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child {
+    position: relative;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a {
+    font-size: 0;
+    width: 100%;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a img,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a img {
+    margin-right: unset !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description {
+    width: 100%;
+    margin-right: unset !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content {
+    max-width: unset !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p::before {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 20px;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3,
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 {
+    padding: 0 20px 0 20px !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 > .meta_container .meta_description p a,
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description p a {
+    font-size: 14px;
+    padding: 15px 30px;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content .button_container .button_item_container > button {
+    padding: 15px 47px !important;
+  }
+
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e .button_container .button_item_container:last-child div:last-child > button > span,
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .button_container .button_item_container:last-child div:last-child > button > span {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e .button_container .button_item_container:last-child div:last-child > button > span::after,
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .button_container .button_item_container:last-child div:last-child > button > span::after {
+    content: url('https://api.particeep.com/document/a217e8f1-db28-4d82-9902-e59d611b4bd3');
+    width: 24px;
+    height: 24px;
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+    margin-left: 10px;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .button_container .button_item_container:last-child div:last-child > button > span::before {
+    content: 'Récapitulatif';
+    font-size: 14px;
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e .button_container .button_item_container:last-child div:last-child > button > span::before {
+    content: 'Je valide';
+    font-size: 14px;
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .step-type-price > .meta_middle > .step_content > .pricer_container::after {
+    content: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est garanti immédiatement en cas de décès accidentel ;\A       après 2 ans si le décès fait suite à une maladie (les cotisations versées\A       seront toutefois remboursées) ; après 1 an s’il fait suite à un suicide\A       ou une tentative de suicide.\A\A" url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est versé à votre conjoint non séparé, non divorcé,\A       à défaut, à vos enfants, nés ou à naitre, vivants ou représentés,\A       par parts égales, à défaut à vos héritiers.\A       Vous pourrez modifier les  bénéficiaires de ce contrat à tout moment.\A       Il est possible que ces derniers doivent avancer les fonds dans l’attente\A       de règlement du capital.\A       N’oubliez pas de les informer de l’existence du contrat.\A\A"url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le contrat est viager. Le montant du capital garanti\A       à la souscription, peut être inférieur au coût des obsèques le moment venu.\A       Les cotisations versées pourraient être supérieures au montant du capital\A       prévu par le contrat.";
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    background: var(--main-background) !important;
+  }
+
+  .root {
+    height: unset !important;
+  }
+
+  .funnel {
+    background: unset !important;
+  }
+
+  .header {
+    padding: 0px 20px !important;
+    min-height: 48px;
+  }
+
+  .header > img {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .header::after {
+    content: "Assurance obsèques \A Devis et souscription";
+    font-family: var(--form-font-primary);
+    font-size: 13px;
+    border-left: 1px solid var(--primary);
+    color: var(--tertiary);
+    padding-left: 10px;
+    white-space: pre;
+  }
+
+  .header::before {
+    right: 0px;
+    background-size: 200px;
+    padding-top: unset !important;
+  }
+
+  .product-step .meta_right {
+    display: none;
+  }
+
+  .meta_bottom .meta_container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  .product_stepper {
+    height: 50px;
+  }
+
+  .product_stepper > .product_stepper_container {
+    height: inherit !important;
+    padding: 0 20px !important;
+  }
+
+  .product_stepper > .product_stepper_container > div {
+    padding: 10px 0px;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] {
+    padding-left: unset !important;
+    padding-right: unset !important;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] [class*="MuiStepButton-root-"] {
+    margin: unset !important;
+    padding: unset !important;
+  }
+
+  .product_stepper .product_stepper_container button::after {
+    font-family: var(--form-font-secondary);
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .5) !important;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] span[class*="MuiStepLabel-root-"]::after {
+    content: '' !important;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active span[class*="MuiStepLabel-root-"]::after {
+    font-weight: bold;
+    color: white !important;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(1) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Votre besoin' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(3) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Vous' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(5) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Devis' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(7) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Récapitulatif' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(9) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Souscription' !important;
+    display: block;
+  }
+
+  .product_stepper .product_stepper_container .product_stepper_step_active:nth-child(11) span[class*="MuiStepLabel-root-"]::after {
+    content: 'Confirmation' !important;
+    display: block;
+  }
+
+  .step_content {
+    width: 100%;
+  }
+
+  .step_content .field_content > div:not(.field_label):not(.meta_container) {
+    width: 100% !important;
+  }
+
+  .step_content > div {
+    padding: 0 20px 16px 20px !important;
+  }
+
+  .step_content .field_content .meta_container {
+    margin-bottom: 20px !important;
+  }
+
+  .step_content .field_content .meta_container .meta_title {
+    margin-bottom: 20px !important;
+  }
+
+  .step_content .field_content .meta_container .meta_title p {
+    font-size: 22px !important;
+  }
+
+  .step_content .field_content .meta_container .meta_subtitle,
+  .step_content .field_content .meta_container .meta_description,
+  .step_content .field_content .field_label {
+    font-size: 16px;
+  }
+
+  .button_container {
+    justify-content: space-between !important;
+    padding: 0px 20px !important;
+  }
+
+  .button_secondary {
+    margin: unset !important;
+  }
+
+  .footer {
+    padding: 0 20px !important;
+  }
+
+  #field-5e882b63-9d97-4458-86dc-f96d036cebcf .radio_field_container {
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  #step-36d7f96f-b6b6-421a-b4a0-95797bfe9862 #field-birthday [class*="MuiFormControl-fullWidth-"],
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .select_field_container,
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-075a499b-2a47-48c3-a5f5-d8d900303014_zip .text_field_container,
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-6902281b-edf8-496b-9138-0150df0fb7b1_phone .text_field_container,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 #field-57234871-3e39-4494-b8bf-b945f66656a4 .text_field_container,
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e #field-cea0a401-d7f1-4a71-b6c8-c8e0d17659a8 .text_field_container {
+    width: 100%;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left {
+    width: 100% !important;
+    padding: 0 20px !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .step-type-price > .meta_middle > .step_content {
+    margin-top: 200px;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_title h1,
+  .step-type-price > .meta_middle > .meta_left .meta_container .meta_title h1 {
+    margin-top: unset !important;
+  }
+
+  .step-type-price > .meta_middle > .meta_left .meta_container .meta_title p {
+    margin-bottom: 20px !important;
+  }
+
+  .step-type-price > .meta_middle > .step_content > .pricer_container::after {
+    content: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est garanti immédiatement en cas de décès accidentel ;\A       après 2 ans si le décès fait suite à une maladie (les cotisations versées seront toutefois remboursées) ;\A       après 1 an s’il fait suite à un suicide ou une tentative de suicide.\A\A" url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est versé à votre conjoint non séparé, non divorcé, à défaut, à vos enfants, nés ou à naitre,\A       vivants ou représentés, par parts égales, à défaut à vos héritiers. Vous pourrez modifier les  bénéficiaires\A       de ce contrat à tout moment. Il est possible que ces derniers doivent avancer\A       les fonds dans l’attente de règlement du capital. N’oubliez pas de les informer de l’existence du contrat.\A\A"url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le contrat est viager. Le montant du capital garanti à la souscription, peut être inférieur\A       au coût des obsèques le moment venu. Les cotisations versées pourraient être supérieures au montant\A       du capital prévu par le contrat.";
+  }
+
+  .step-type-price .pricer_container {
+    width: 100% !important;
+    margin: unset !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left .meta_container .meta_subtitle,
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left .meta_container .meta_description {
+    padding-bottom: unset !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul li::before {
+    -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child::after,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child::after {
+    display: none;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child {
+    position: relative;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a {
+    font-size: 0;
+    width: 100%;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a img,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a img {
+    margin-right: unset !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description {
+    margin-right: unset !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content {
+    max-width: unset !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p::before {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 20px;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p {
+    text-align: center;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3,
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 {
+    padding: 0 20px 0 20px !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 > .meta_container .meta_description p a,
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description p a {
+    font-size: 14px;
+    padding: 15px 30px;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content .button_container .button_item_container > button {
+    padding: 15px 47px !important;
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    background: var(--main-background) !important;
+  }
+
+  .root {
+    height: 100% !important;
+    min-height: 100vh;
+  }
+
+  .funnel {
+    background: unset !important;
+  }
+
+  .header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px !important;
+    z-index: 999 !important;
+  }
+
+  .header > img {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .header::before {
+    right: 0px;
+    background-size: 200px;
+    padding-top: unset !important;
+  }
+
+  .product-step .meta_right {
+    display: none;
+  }
+
+  .product-step .meta_bottom {
+    -webkit-box-flex: unset !important;
+        -ms-flex: unset !important;
+            flex: unset !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .product-step .meta_bottom .meta_container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100% !important;
+    padding: 24px 52px !important;
+  }
+
+  .product-step .meta_bottom .meta_container {
+    margin-top: unset !important;
+    margin-bottom: unset !important;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] {
+    padding-left: unset !important;
+    padding-right: unset !important;
+  }
+
+  .product_stepper .product_stepper_container [class*="MuiStep-root-"] [class*="MuiStepButton-root-"] {
+    margin: unset !important;
+    padding: unset !important;
+  }
+
+  .product_stepper .product_stepper_container button::after {
+    font-family: var(--form-font-secondary);
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .5) !important;
+  }
+
+  .form_body {
+    position: relative;
+    height: 100%;
+    min-height: calc(100vh - 255px);
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+
+  .product-step {
+    -webkit-box-flex: 1 !important;
+        -ms-flex: auto !important;
+            flex: auto !important;
+    height: 100% !important;
+    min-height: 100%;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+
+  .step_content {
+    width: 100%;
+    padding: 0px 52px !important;
+    overflow: scroll;
+  }
+
+  .step_content .field_content > div:not(.field_label):not(.meta_container) {
+    width: 100% !important;
+  }
+
+  .step_content > div {
+    padding: unset !important;
+  }
+
+  .step_content .field_content .meta_container {
+    margin-bottom: 20px !important;
+  }
+
+  .step_content .field_content .meta_container .meta_title {
+    margin-bottom: 20px !important;
+  }
+
+  .step_content .field_content .meta_container .meta_subtitle,
+  .step_content .field_content .meta_container .meta_description,
+  .step_content .field_content .field_label {
+    font-size: 16px;
+  }
+
+  .button_container {
+    justify-content: space-between !important;
+    padding: 0px 20px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .button_secondary {
+    margin: unset !important;
+  }
+
+  .footer {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    padding: 0px 52px !important;
+  }
+
+  #field-5e882b63-9d97-4458-86dc-f96d036cebcf .radio_field_container {
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  #step-36d7f96f-b6b6-421a-b4a0-95797bfe9862 #field-birthday [class*="MuiFormControl-fullWidth-"],
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-fe1b05c9-4db1-4c53-ad82-38a0fa5bfda6 .select_field_container,
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-075a499b-2a47-48c3-a5f5-d8d900303014_zip .text_field_container,
+  #step-cecc615b-b0d1-479b-a33f-de66ac47ceb9 #field-6902281b-edf8-496b-9138-0150df0fb7b1_phone .text_field_container,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 #field-57234871-3e39-4494-b8bf-b945f66656a4 .text_field_container,
+  #step-c3c356fc-7e60-498f-8fc3-b0f78839c11e #field-cea0a401-d7f1-4a71-b6c8-c8e0d17659a8 .text_field_container {
+    width: 30% !important;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left {
+    width: 100% !important;
+    padding: 0 52px !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_title h1,
+  .step-type-price > .meta_middle > .meta_left .meta_container .meta_title h1 {
+    margin-top: unset !important;
+  }
+
+  .step-type-price > .meta_middle > .step_content > .pricer_container::after {
+    content: url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est garanti immédiatement en cas de décès accidentel ; après 2 ans si le décès fait suite à une maladie (les\A       cotisations versées seront toutefois remboursées) ; après 1 an s’il fait suite à un suicide ou une tentative de suicide.\A\A" url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le capital est versé à votre conjoint non séparé, non divorcé, à défaut, à vos enfants, nés ou à naitre, vivants ou représentés,\A       par parts égales, à défaut à vos héritiers. Vous pourrez modifier les  bénéficiaires de ce contrat à tout moment.\A       Il est possible que ces derniers doivent avancer les fonds dans l’attente de règlement du capital.\A       N’oubliez pas de les informer de l’existence du contrat.\A\A"url('https://api.particeep.com/document/dedbbd61-eddd-4e2d-a2f8-12abe91ecb5f')"  Le contrat est viager. Le montant du capital garanti à la souscription, peut être inférieur au coût des obsèques le moment venu.\A       Les cotisations versées pourraient être supérieures au montant du capital prévu par le contrat.";
+  }
+
+  .step-type-price .pricer_container {
+    width: 100% !important;
+    margin: unset !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left .meta_container .meta_subtitle,
+  #step-39fc7b71-c176-43d8-84cb-bfd85f5edfa3 .meta_left .meta_container .meta_description {
+    padding-bottom: unset !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-1 > .meta_container .meta_description ul li::before {
+    -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child {
+    position: relative;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 > .meta_container .meta_subtitle p:last-child a img,
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-3 > .meta_container .meta_subtitle p:last-child a img {
+    margin-right: unset !important;
+  }
+
+  #step-9f9cee88-e077-4db1-b933-506b67c29ae0 > .meta_middle > .step_content > #field-label_step_5-2 .meta_container .meta_description {
+    margin-right: unset !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content {
+    max-width: unset !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be {
+    height: calc(100vh - 325px);
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p::before {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 20px;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-1 > .meta_container .meta_title p {
+    text-align: center;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3,
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 {
+    padding: 0 20px 0 20px !important;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-3 > .meta_container .meta_description p a,
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content > #field-label_step_7-2 > .meta_container .meta_description p a {
+    font-size: 14px;
+    padding: 15px 30px;
+  }
+
+  #step-1ac98f56-cbcf-4510-ae8e-782841a547be > .meta_middle > .step_content .button_container .button_item_container > button {
+    padding: 15px 47px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+
+}
