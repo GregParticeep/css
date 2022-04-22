@@ -1196,6 +1196,7 @@ ul[role="listbox"] li:not([data-value=""]) {
 .step-type-address,
 .step-type-price {
 	min-height: 600px;
+	justify-content: flex-start !important;
 	transform: scale(1);
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
